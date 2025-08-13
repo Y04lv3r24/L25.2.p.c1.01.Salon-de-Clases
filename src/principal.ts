@@ -30,7 +30,7 @@ let salida: HTMLElement | null = document.getElementById("salida");
 if (salida) {
     salida.innerHTML += `<p>La Edad promedio es: ${salonClases.edadPromedio()}</p>`;
     salida.innerHTML += `<p>El Estudiante con la mayor edad es: ${salonClases.estudianteMayorEdad()}</p>`;
-    salida.innerHTML += `<p> El Porcentaje de chicas que son mayores de edad es: ${salonClases.porcentajeMujeresMayoresDeEdad()}</p>`;}
+    salida.innerHTML += `<p> El Porcentaje de chicas que son mayores de edad es: ${salonClases.porcentajeMujeresMayoresDeEdad()}%</p>`;}
     else {
         console.log("No se pudo obtener el elemento con id 'salida'");
     }

@@ -4,7 +4,7 @@ export default class Cl_SalonClases {
         this._cntEstudiantesMujeres = 0;
         this._cntMujeresMayoresEdad = 0;
         this._acEdad = 0;
-        this._nombreEstudianteMayorEdad = "";
+        this._auxNombreMayor = "";
         this._auxEdadMayor = 0;
     }
     procesarEstudiantes(e) {
@@ -23,14 +23,14 @@ export default class Cl_SalonClases {
         //Estudiante con mayor edad
         if (e.edad > this._auxEdadMayor) {
             this._auxEdadMayor = e.edad;
-            this._nombreEstudianteMayorEdad = e.nombre;
+            this._auxNombreMayor = e.nombre;
         }
     }
     edadPromedio() {
         return this._acEdad / this._cntEstudiantes;
     }
     estudianteMayorEdad() {
-        return this._nombreEstudianteMayorEdad;
+        return this._auxNombreMayor;
     }
     porcentajeMujeresMayoresDeEdad() {
         return (this._cntMujeresMayoresEdad / this._cntEstudiantesMujeres) * 100;

@@ -5,7 +5,7 @@ export default class Cl_SalonClases {
     private _cntEstudiantesMujeres: number = 0;
     private _cntMujeresMayoresEdad: number = 0;
     private _acEdad: number = 0;
-    private _nombreEstudianteMayorEdad: string = "";
+    private _auxNombreMayor: string = "";
     private _auxEdadMayor: number = 0;
     constructor() {}
 
@@ -25,14 +25,14 @@ export default class Cl_SalonClases {
         //Estudiante con mayor edad
         if (e.edad > this._auxEdadMayor) {
             this._auxEdadMayor = e.edad;
-            this._nombreEstudianteMayorEdad = e.nombre;
+            this._auxNombreMayor = e.nombre;
         }
     }
     edadPromedio() {
         return this._acEdad / this._cntEstudiantes;
     }
     estudianteMayorEdad() {
-        return this._nombreEstudianteMayorEdad;
+        return this._auxNombreMayor;
     }
     porcentajeMujeresMayoresDeEdad() {
         return (this._cntMujeresMayoresEdad / this._cntEstudiantesMujeres) * 100;
